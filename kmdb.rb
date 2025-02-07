@@ -97,14 +97,14 @@ rails db:migrate
 # Insert data into the database that reflects the sample data shown above.
 # Do not use hard-coded foreign key IDs.
 # TODO!
-warner_bros = Studio.find_by({ "name" => "Warner Bros." })
 
 new_studio=Studio.new
 new_studio["name"] = "Warner Bros."
 new_studio.save
+
 puts new_studio.inspect
 
-christian_bale = Actor.find_by({ "name" => "Christian Bale" })
+
 
 new_actor=Actor.new
 puts new_actor.inspect
@@ -181,7 +181,7 @@ puts new_actor.inspect
 new_actor["name"] = "Anne Hathaway"
 new_actor.save
 
-batman_begins = Movie.find_by({ "title" => "Batman Begins" })
+warner_bros = Studio.find_by({ "name" => "Warner Bros." })
 
 new_movie=Movie.new
 puts new_movie.inspect
@@ -211,96 +211,111 @@ new_movie["rated"] = "PG-13"
 new_movie["studio_id"] = warner_bros["id"]
 new_movie.save
 
+movie1 = Movie.find_by({ "title" => "Batman Begins" })
+movie2 = Movie.find_by({ "title" => "The Dark Knight" })
+movie3 = Movie.find_by({ "title" => "The Dark Knight Rises" })
+
+actor1 = Actor.find_by({ "name" => "Christian Bale" })
+actor2 = Actor.find_by({ "name" => "Michael Caine" })
+actor3 = Actor.find_by({ "name" => "Liam Neeson" })
+actor4 = Actor.find_by({ "name" => "Katie Holmes" })
+actor5 = Actor.find_by({ "name" => "Gary Oldman" })
+actor6 = Actor.find_by({ "name" => "Heath Ledger" })
+actor7 = Actor.find_by({ "name" => "Aaron Eckhart" })
+actor8 = Actor.find_by({ "name" => "Maggie Gyllenhaal" })
+actor9 = Actor.find_by({ "name" => "Tom Hardy" })
+actor10 = Actor.find_by({ "name" => "Joseph Gordon-Levitt" })
+actor11 = Actor.find_by({ "name" => "Anne Hathaway" })
+
 new_role=Role.new
 puts new_role.inspect
 new_role["character_name"] = "Bruce Wayne"
-new_role["movie_id"] = batman_begins["id"]
-new_role["actor_id"] = christian_bale["id"]
+new_role["movie_id"] = movie1["id"]
+new_role["actor_id"] = actor1["id"]
 
 new_role=Role.new
 puts new_role.inspect
 new_role["character_name"] = "Alfred"
-new_role["movie_id"] = batman_begins["id"]
-new_role["actor_id"] = michael_caine["id"]
+new_role["movie_id"] = movie1["id"]
+new_role["actor_id"] = actor2["id"]
 
 new_role=Role.new
 puts new_role.inspect
 new_role["character_name"] = "Ra's Al Ghul"
-new_role["movie_id"] = batman_begins["id"]
-new_role["actor_id"] = liam_neeson["id"]
+new_role["movie_id"] = movie1["id"]
+new_role["actor_id"] = actor3["id"]
 
 new_role=Role.new
 puts new_role.inspect
 new_role["character_name"] = "Rachel Dawes"
-new_role["movie_id"] = batman_begins["id"]
-new_role["actor_id"] = katie_holmes["id"]
+new_role["movie_id"] = movie1["id"]
+new_role["actor_id"] = actor4["id"]
 
 new_role=Role.new
 puts new_role.inspect
 new_role["character_name"] = "Commissioner Gordon"
-new_role["movie_id"] = batman_begins["id"]
-new_role["actor_id"] = gary_oldman ["id"]
+new_role["movie_id"] = movie1["id"]
+new_role["actor_id"] = actor5["id"]
 
 new_role=Role.new
 puts new_role.inspect
 new_role["character_name"] = "Bruce Wayne"
-new_role["movie_id"] = the_dark_knight["id"]
-new_role["actor_id"] = christian_bale["id"]
+new_role["movie_id"] = movie2["id"]
+new_role["actor_id"] = actor1"id"]
 
 new_role=Role.new
 puts new_role.inspect
 new_role["character_name"] = "Joker"
-new_role["movie_id"] = the_dark_knight["id"]
-new_role["actor_id"] = heath_ledger["id"]
+new_role["movie_id"] = movie2["id"]
+new_role["actor_id"] = actor6["id"]
 
 new_role=Role.new
 puts new_role.inspect
 new_role["character_name"] = "Harvey Dent"
-new_role["movie_id"] = the_dark_knight["id"]
-new_role["actor_id"] = aaron_eckhart["id"]
+new_role["movie_id"] = movie2["id"]
+new_role["actor_id"] = actor7["id"]
 
 new_role=Role.new
 puts new_role.inspect
 new_role["character_name"] = "Alfred"
-new_role["movie_id"] = the_dark_knight["id"]
-new_role["actor_id"] = michael_caine["id"]
+new_role["movie_id"] = movie2["id"]
+new_role["actor_id"] = actor2["id"]
 
 new_role=Role.new
 puts new_role.inspect
 new_role["character_name"] = "Rachel Dawes"
-new_role["movie_id"] = the_dark_knight["id"]
-new_role["actor_id"] = maggie_gyllenhaal["id"]
+new_role["movie_id"] = movie2["id"]
+new_role["actor_id"] = actor8["id"]
 
 new_role=Role.new
 puts new_role.inspect
 new_role["character_name"] = "Bruce Wayne"
-new_role["movie_id"] = the_dark_knight_rises["id"]
-new_role["actor_id"] = christian_bale["id"]
+new_role["movie_id"] = movie3["id"]
+new_role["actor_id"] = actor1["id"]
 
 new_role=Role.new
 puts new_role.inspect
 new_role["character_name"] = "Commissioner Gordon"
-new_role["movie_id"] = the_dark_knight_rises["id"]
-new_role["actor_id"] = gary_oldman["id"]
+new_role["movie_id"] = movie3["id"]
+new_role["actor_id"] = actor2["id"]
 
 new_role=Role.new
 puts new_role.inspect
 new_role["character_name"] = "Bane"
-new_role["movie_id"] = the_dark_knight_rises["id"]
-new_role["actor_id"] = tom_hardy["id"]
+new_role["movie_id"] = movie3["id"]
+new_role["actor_id"] = actor9["id"]
 
 new_role=Role.new
 puts new_role.inspect
 new_role["character_name"] = "John Blake"
-new_role["movie_id"] = the_dark_knight_rises["id"]
-new_role["actor_id"] = joseph_gordon_levitt["id"]
+new_role["movie_id"] = movie3["id"]
+new_role["actor_id"] = actor10["id"]
 
 new_role=Role.new
 puts new_role.inspect
 new_role["character_name"] = "Selina Kyle"
-new_role["movie_id"] = the_dark_knight_rises["id"]
-new_role["actor_id"] = anne_hathaway["id"]
-
+new_role["movie_id"] = movie3["id"]
+new_role["actor_id"] = actor11["id"]
 
 
 # Prints a header for the movies output
