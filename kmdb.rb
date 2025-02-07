@@ -181,25 +181,31 @@ puts new_actor.inspect
 new_actor["name"] = "Anne Hathaway"
 new_actor.save
 
+batman_begins = Movie.find_by({ "title" => "Batman Begins" })
+
 new_movie=Movie.new
 puts new_movie.inspect
-new_movie["name"] = "Batman Begins"
+new_movie["title"] = "Batman Begins"
 new_movie["year_released"] = "2005"
 new_movie["rated"] = "PG-13"
 new_movie["studio_id"] = 
 new_movie.save
 
+the_dark_knight = Movie.find_by({ "title" => "The Dark Knight" })
+
 new_movie=Movie.new
 puts new_movie.inspect
-new_movie["name"] = "The Dark Knight"
+new_movie["title"] = "The Dark Knight"
 new_movie["year_released"] = "2008"
 new_movie["rated"] = "PG-13"
 new_movie["studio_id"] = 
 new_movie.save
 
+the_dark_knight_rises = Movie.find_by({ "title" => "The Dark Knight Rises" })
+
 new_movie=Movie.new
 puts new_movie.inspect
-new_movie["name"] = "The Dark Knight Rises"
+new_movie["title"] = "The Dark Knight Rises"
 new_movie["year_released"] = "2012"
 new_movie["rated"] = "PG-13"
 new_movie["studio_id"] = 
