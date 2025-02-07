@@ -97,61 +97,84 @@ rails db:migrate
 # Insert data into the database that reflects the sample data shown above.
 # Do not use hard-coded foreign key IDs.
 # TODO!
+warner_bros = Studio.find_by({ "name" => "Warner Bros." })
 
 new_studio=Studio.new
-puts new_studio.inspect
 new_studio["name"] = "Warner Bros."
 new_studio.save
+puts new_studio.inspect
+
+christian_bale = Actor.find_by({ "name" => "Christian Bale" })
 
 new_actor=Actor.new
 puts new_actor.inspect
 new_actor["name"] = "Christian Bale"
 new_actor.save
 
+michael_caine = Actor.find_by({ "name" => "Michael Caine" })
+
 new_actor=Actor.new
 puts new_actor.inspect
 new_actor["name"] = "Michael Caine"
 new_actor.save
+
+liam_neeson = Actor.find_by({ "name" => "Liam Neeson" })
 
 new_actor=Actor.new
 puts new_actor.inspect
 new_actor["name"] = "Liam Neeson"
 new_actor.save
 
+katie_holmes = Actor.find_by({ "name" => "Katie Holmes" })
+
 new_actor=Actor.new
 puts new_actor.inspect
 new_actor["name"] = "Katie Holmes"
 new_actor.save
+
+gary_oldman = Actor.find_by({ "name" => "Gary Oldman" })
 
 new_actor=Actor.new
 puts new_actor.inspect
 new_actor["name"] = "Gary Oldman"
 new_actor.save
 
+heath_ledger = Actor.find_by({ "name" => "Heath Ledger" })
+
 new_actor=Actor.new
 puts new_actor.inspect
 new_actor["name"] = "Heath Ledger"
 new_actor.save
+
+aaron_eckhard = Actor.find_by({ "name" => "Aaron Eckhart" })
 
 new_actor=Actor.new
 puts new_actor.inspect
 new_actor["name"] = "Aaron Eckhart"
 new_actor.save
 
+maggie_gyllenhaal = Actor.find_by({ "name" => "Maggie Gyllenhaal" })
+
 new_actor=Actor.new
 puts new_actor.inspect
 new_actor["name"] = "Maggie Gyllenhaal"
 new_actor.save
+
+tom_hardy = Actor.find_by({ "name" => "Tom Hardy" })
 
 new_actor=Actor.new
 puts new_actor.inspect
 new_actor["name"] = "Tom Hardy"
 new_actor.save
 
+joseph_gordon_levitt = Actor.find_by({ "name" => "Joseph Gordon Levitt" })
+
 new_actor=Actor.new
 puts new_actor.inspect
 new_actor["name"] = "Joseph Gordon-Levitt"
 new_actor.save
+
+anne_hathaway = Actor.find_by({ "name" => "Anne Hathaway" })
 
 new_actor=Actor.new
 puts new_actor.inspect
