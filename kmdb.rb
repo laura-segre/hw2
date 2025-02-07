@@ -313,7 +313,6 @@ for movie in movies
   end
 
 
-
 # Prints a header for the cast output
 puts format("%-25s %-20s %-20s", "Movie", "Character", "Actor")
 puts "-" * 70
